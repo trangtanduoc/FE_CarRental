@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/navigationStations"
+        android:icon="@android:drawable/ic_menu_mylocation"
+        android:title="Trạm" />
+    <item
+        android:id="@+id/navigationRentals"
+        android:icon="@android:drawable/ic_menu_agenda"
+        android:title="Đơn thuê" />
+    <item
+        android:id="@+id/navigationProfile"
+        android:icon="@android:drawable/ic_menu_manage"
+        android:title="Tài khoản" />
+</menu>

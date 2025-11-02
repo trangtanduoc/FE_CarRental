@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <TextView
+            android:id="@+id/vehicleManagementTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Quản lý xe"
+        android:textAppearance="@style/TextAppearance.Material3.HeadlineSmall" />
+
+        <Button
+            android:id="@+id/buttonUpdateBattery"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Cập nhật pin"
+            android:layout_marginTop="24dp" />
+
+        <Button
+            android:id="@+id/buttonUpdateStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Đổi trạng thái"
+            android:layout_marginTop="16dp" />
+
+    </LinearLayout>
+</ScrollView>

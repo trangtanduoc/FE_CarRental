@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">PRM Car Rental</string>
+    <string name="login_title">Đăng nhập</string>
+    <string name="register_title">Đăng ký</string>
+    <string name="home_title">Trang chủ</string>
+    <string name="station_list_title">Danh sách trạm</string>
+    <string name="vehicle_list_title">Xe tại trạm</string>
+    <string name="active_rental_title">Đơn thuê hiện tại</string>
+    <string name="rental_history_title">Lịch sử thuê</string>
+    <string name="profile_title">Tài khoản</string>
+    <string name="payment_title">Thanh toán</string>
+    <string name="payment_success_title">Thanh toán thành công</string>
+    <string name="staff_home_title">Nhân viên trạm</string>
+    <string name="pending_verification_title">Chờ xác thực</string>
+    <string name="user_verification_detail_title">Chi tiết người dùng</string>
+    <string name="station_vehicles_title">Xe tại trạm</string>
+    <string name="vehicle_management_title">Quản lý xe</string>
+    <string name="receive_vehicle_title">Nhận xe trả</string>
+    <string name="action_login">Đăng nhập</string>
+    <string name="action_register">Đăng ký</string>
+    <string name="action_continue">Tiếp tục</string>
+    <string name="station_available_vehicles">%1$d xe khả dụng</string>
+    <string name="error_generic">Có lỗi xảy ra. Vui lòng thử lại.</string>
+    <string name="error_network">Không thể kết nối: %1$s</string>
+    <string name="vehicle_status_format">Trạng thái: %1$s</string>
+    <string name="vehicle_battery_format">Pin: %1$d%%</string>
+    <string name="vehicle_list_empty">Không có xe khả dụng tại trạm này.</string>
+    <string name="vehicle_type_format">Loại: %1$s</string>
+    <string name="vehicle_station_format">Trạm: %1$s</string>
+    <string name="vehicle_detail_unknown">Xe chưa xác định</string>
+    <string name="reserve_placeholder_success">Đã đặt xe thành công (demo)</string>
+    <string name="error_email_required">Vui lòng nhập email</string>
+    <string name="error_password_required">Vui lòng nhập mật khẩu</string>
+    <string name="login_success">Đăng nhập thành công</string>
+    <string name="error_fullname_required">Vui lòng nhập họ tên</string>
+    <string name="register_success">Đăng ký thành công, hãy đăng nhập</string>
+</resources>
