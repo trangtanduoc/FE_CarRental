@@ -7,49 +7,140 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="24dp">
+        android:padding="24dp"
+        android:background="?android:attr/windowBackground">
 
+        <!-- Tiêu đề -->
         <TextView
             android:id="@+id/vehicleName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Tên xe"
-        android:textAppearance="@style/TextAppearance.Material3.HeadlineSmall" />
+            android:textAppearance="@style/TextAppearance.Material3.HeadlineSmall"
+            android:textStyle="bold"
+            android:textColor="#222222" />
 
-        <TextView
-            android:id="@+id/vehicleStatus"
-            android:layout_width="wrap_content"
+        <!-- Phân cách -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#CCCCCC"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Thông tin chi tiết -->
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Trạng thái"
-            android:layout_marginTop="8dp" />
+            android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/vehicleBattery"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Pin"
-            android:layout_marginTop="4dp" />
+            <!-- Trạng thái -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingVertical="6dp">
 
-        <TextView
-            android:id="@+id/vehicleType"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Loại"
-            android:layout_marginTop="4dp" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Trạng thái:"
+                    android:textStyle="bold"
+                    android:textColor="#555555" />
 
-        <TextView
-            android:id="@+id/vehicleStation"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Trạm"
-            android:layout_marginTop="4dp" />
+                <TextView
+                    android:id="@+id/vehicleStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Đang hoạt động"
+                    android:textColor="#000000" />
+            </LinearLayout>
 
+            <!-- Pin -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingVertical="6dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Pin:"
+                    android:textStyle="bold"
+                    android:textColor="#555555" />
+
+                <TextView
+                    android:id="@+id/vehicleBattery"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="80%"
+                    android:textColor="#000000" />
+            </LinearLayout>
+
+            <!-- Loại xe -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingVertical="6dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Loại xe:"
+                    android:textStyle="bold"
+                    android:textColor="#555555" />
+
+                <TextView
+                    android:id="@+id/vehicleType"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Xe điện"
+                    android:textColor="#000000" />
+            </LinearLayout>
+
+            <!-- Trạm -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingVertical="6dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Trạm:"
+                    android:textStyle="bold"
+                    android:textColor="#555555" />
+
+                <TextView
+                    android:id="@+id/vehicleStation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Trạm A"
+                    android:textColor="#000000" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Nút đặt xe -->
         <Button
             android:id="@+id/buttonReserveVehicle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Đặt xe"
-            android:layout_marginTop="24dp" />
+            android:textAllCaps="false"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginTop="32dp"
+            android:backgroundTint="?attr/colorPrimary"
+            android:textColor="@android:color/white"
+            android:padding="12dp" />
 
     </LinearLayout>
 </ScrollView>

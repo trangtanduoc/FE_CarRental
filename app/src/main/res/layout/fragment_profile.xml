@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="24dp"
-    android:background="?android:attr/colorBackground">
+    android:background="#F5F5F5"
+    android:padding="24dp">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
 
         <!-- Tiêu đề -->
         <TextView
@@ -17,10 +19,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Thông tin cá nhân"
-            android:textSize="22sp"
+            android:textSize="24sp"
             android:textStyle="bold"
-            android:textColor="?android:attr/textColorPrimary"
-            android:layout_marginBottom="24dp" />
+            android:textColor="#212121"
+            android:layout_marginBottom="32dp" />
 
         <!-- Email (readonly) -->
         <com.google.android.material.textfield.TextInputLayout
@@ -28,11 +30,11 @@
             android:layout_height="wrap_content"
             android:hint="Email"
             app:boxBackgroundMode="filled"
-            app:boxBackgroundColor="@android:color/darker_gray"
-            app:boxCornerRadiusTopStart="12dp"
-            app:boxCornerRadiusTopEnd="12dp"
-            app:boxCornerRadiusBottomStart="12dp"
-            app:boxCornerRadiusBottomEnd="12dp">
+            app:boxBackgroundColor="#E0E0E0"
+            app:boxCornerRadiusTopStart="16dp"
+            app:boxCornerRadiusTopEnd="16dp"
+            app:boxCornerRadiusBottomStart="16dp"
+            app:boxCornerRadiusBottomEnd="16dp">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/profileEmail"
@@ -40,8 +42,7 @@
                 android:layout_height="wrap_content"
                 android:enabled="false"
                 android:inputType="textEmailAddress"
-
-                android:textColor="@android:color/black" />
+                android:textColor="#212121" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <!-- Họ và tên -->
@@ -49,8 +50,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Họ và tên"
-
-            android:layout_marginTop="16dp">
+            android:layout_marginTop="16dp"
+            app:boxBackgroundMode="filled"
+            app:boxBackgroundColor="#E0E0E0"
+            app:boxCornerRadiusTopStart="16dp"
+            app:boxCornerRadiusTopEnd="16dp"
+            app:boxCornerRadiusBottomStart="16dp"
+            app:boxCornerRadiusBottomEnd="16dp">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/profileFullName"
@@ -64,8 +70,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Số bằng lái"
-
-            android:layout_marginTop="16dp">
+            android:layout_marginTop="16dp"
+            app:boxBackgroundMode="filled"
+            app:boxBackgroundColor="#E0E0E0"
+            app:boxCornerRadiusTopStart="16dp"
+            app:boxCornerRadiusTopEnd="16dp"
+            app:boxCornerRadiusBottomStart="16dp"
+            app:boxCornerRadiusBottomEnd="16dp">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/profileDriverLicense"
@@ -75,25 +86,32 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <!-- Nút Lưu -->
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/buttonSaveProfile"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Lưu thay đổi"
             android:textAllCaps="false"
-            android:layout_marginTop="24dp"
-            style="?attr/materialButtonOutlinedStyle" />
+            android:layout_marginTop="32dp"
+            android:backgroundTint="#03A9F4"
+            android:textColor="#FFFFFF"
+
+            android:stateListAnimator="@null"
+            android:elevation="4dp" />
 
         <!-- Nút Đăng xuất -->
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/buttonLogout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Đăng xuất"
             android:textAllCaps="false"
-            android:layout_marginTop="12dp"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="#F44336"
+            android:textColor="#FFFFFF"
 
-            android:textColor="@android:color/white" />
+            android:stateListAnimator="@null"
+            android:elevation="4dp" />
 
     </LinearLayout>
 </ScrollView>
