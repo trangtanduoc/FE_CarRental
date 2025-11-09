@@ -25,6 +25,9 @@ public class AuthResponse {
     @SerializedName("expiresAt")
     private String expiresAt;
 
+    @SerializedName("driverLicenseNumber")
+    private String driverLicenseNumber;
+
     public String getUserId() {
         return userId;
     }
@@ -51,5 +54,8 @@ public class AuthResponse {
 
     public String getExpiresAt() {
         return expiresAt;
+    }
+    public String getDriverLicenseNumber() {
+        return driverLicenseNumber;
     }
 }

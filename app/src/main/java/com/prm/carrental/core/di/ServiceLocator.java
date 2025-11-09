@@ -5,6 +5,7 @@ import android.content.Context;
 import com.prm.carrental.core.network.ApiClient;
 import com.prm.carrental.core.network.service.AuthService;
 import com.prm.carrental.core.network.service.StationsService;
+import com.prm.carrental.core.network.service.UserService;
 import com.prm.carrental.core.session.SessionManager;
 
 /**
@@ -16,6 +17,8 @@ public final class ServiceLocator {
     private static ApiClient apiClient;
     private static AuthService authService;
     private static StationsService stationsService;
+
+    private static UserService userService;
 
     private ServiceLocator() {
         // no-op
@@ -42,5 +45,12 @@ public final class ServiceLocator {
 
     public static StationsService stationsService() {
         return stationsService;
+    }
+
+    public static UserService userService() {
+        if (userService == null) {
+            userService = apiClient.createService(UserService.class);
+        }
+        return userService;
     }
 }

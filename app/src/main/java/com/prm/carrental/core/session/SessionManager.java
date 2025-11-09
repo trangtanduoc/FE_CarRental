@@ -17,6 +17,8 @@ public class SessionManager {
     private static final String KEY_ROLE = "user_role";
     private static final String KEY_FULL_NAME = "user_full_name";
     private static final String KEY_USER_ID = "user_id";
+    private static final String KEY_EMAIL = "user_email";
+    private static final String KEY_DRIVER_LICENSE = "driver_license_number";
 
     private final SharedPreferences sharedPreferences;
 
@@ -30,8 +32,27 @@ public class SessionManager {
             .putString(KEY_ROLE, response.getRole())
             .putString(KEY_FULL_NAME, response.getFullName())
             .putString(KEY_USER_ID, response.getUserId())
-            .apply();
+                .putString(KEY_EMAIL, response.getEmail())
+                .putString(KEY_DRIVER_LICENSE, response.getDriverLicenseNumber())
+                .apply();
     }
+
+    public void setDriverLicenseNumber(@Nullable String driverLicense) {
+        sharedPreferences.edit()
+                .putString(KEY_DRIVER_LICENSE, driverLicense)
+                .commit();
+    }
+
+    /** Cập nhật fullName nếu người dùng thay đổi */
+    public void setFullName(@Nullable String fullName) {
+        sharedPreferences.edit()
+                .putString(KEY_FULL_NAME, fullName)
+                .commit();
+    }
+
+
+
+
 
     @Nullable
     public String getToken() {
@@ -53,6 +74,16 @@ public class SessionManager {
         return sharedPreferences.getString(KEY_USER_ID, null);
     }
 
+
+
+    @Nullable
+    public String getEmail() {
+        return sharedPreferences.getString(KEY_EMAIL, null);
+    }
+    @Nullable
+    public String getDriverLicenseNumber() {
+        return sharedPreferences.getString(KEY_DRIVER_LICENSE, null);
+    }
     public void clear() {
         sharedPreferences.edit().clear().apply();
     }
