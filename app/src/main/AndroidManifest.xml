@@ -3,6 +3,13 @@
     package="com.prm.carrental">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
 
     <application
         android:name=".core.CarRentalApp"
@@ -15,7 +22,21 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Carrental"
         android:usesCleartextTraffic="true">
-
+        <activity
+            android:name=".ui.staff.StaffVehicleListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.staff.StaffStatusVehicleHomeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.staff.StaffStationDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.staff.StaffVehicleDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.staff.StaffStationListActivity"
+            android:exported="false" />
         <activity
             android:name=".ui.payment.PaymentSuccessActivity"
             android:exported="false" />
@@ -47,22 +68,23 @@
             android:name=".ui.staff.VehicleManagementActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.staff.StationVehiclesActivity"
+            android:name=".ui.staff.StaffStationVehicleListActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.staff.UserVerificationDetailActivity"
+            android:name=".ui.staff.StaffUserDetailActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.staff.PendingVerificationListActivity"
-            android:exported="false" />
-        <activity
-            android:name=".ui.staff.StaffHomeActivity"
+            android:name=".ui.staff.StaffUserListActivity"
             android:exported="false" />
         <activity
             android:name=".ui.auth.LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.staff.StaffHomeActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

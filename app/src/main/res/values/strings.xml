@@ -10,7 +10,7 @@
     <string name="profile_title">Tài khoản</string>
     <string name="payment_title">Thanh toán</string>
     <string name="payment_success_title">Thanh toán thành công</string>
-    <string name="staff_home_title">Nhân viên trạm</string>
+    <string name="staff_home_title">Car Rental - Nhân viên</string>
     <string name="pending_verification_title">Chờ xác thực</string>
     <string name="user_verification_detail_title">Chi tiết người dùng</string>
     <string name="station_vehicles_title">Xe tại trạm</string>

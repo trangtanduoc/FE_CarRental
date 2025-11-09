@@ -10,34 +10,76 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
+        android:orientation="horizontal"
         android:padding="16dp">
-
-        <TextView
-            android:id="@+id/stationName"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:textAppearance="@style/TextAppearance.Material3.TitleMedium"
-            android:textColor="@color/textColorPrimary"
-            android:text="Tên trạm" />
+            android:layout_weight="3"
+            android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/stationAddress"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
-            android:text="Địa chỉ"
-            android:textAppearance="@style/TextAppearance.Material3.BodyMedium"
-            android:textColor="@color/textColorSecondary" />
+            <TextView
+                android:id="@+id/tvStationName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/TextAppearance.Material3.TitleMedium"
+                android:textColor="@color/textColorPrimary"
+                android:text="Tên trạm"
 
-        <TextView
-            android:id="@+id/stationAvailability"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="6dp"
-            android:text="0 xe khả dụng"
-            android:textAppearance="@style/TextAppearance.Material3.BodySmall"
-            android:textColor="@color/secondaryColor" />
+                android:drawableStart="@drawable/ic_location"
+                android:drawablePadding="10dp"/>
 
+            <TextView
+                android:id="@+id/tvStationAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginStart="40dp"
+                android:text="Địa chỉ"
+                android:textAppearance="@style/TextAppearance.Material3.BodyMedium"
+                android:textColor="@color/textColorSecondary" />
+
+            <TextView
+                android:id="@+id/tvStationAvailability"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:layout_marginStart="40dp"
+                android:text="0 xe khả dụng"
+                android:textAppearance="@style/TextAppearance.Material3.BodySmall"
+                android:textColor="@color/secondaryColor"
+                android:drawableStart="@drawable/ic_vehicle"
+                android:drawablePadding="8dp"
+                android:textSize="18sp"/>
+        </LinearLayout>
+
+        <!-- nút Edit + Delete -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="10dp">
+
+            <ImageButton
+                android:id="@+id/btnEdit"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:background="@android:color/transparent"
+                android:padding="4dp"
+                android:src="@drawable/ic_edit"
+                android:contentDescription="Edit"/>
+
+            <ImageButton
+                android:id="@+id/btnDelete"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:background="@android:color/transparent"
+                android:padding="4dp"
+                android:src="@drawable/ic_delete"
+                android:contentDescription="Delete"
+                android:layout_marginStart="12dp"/>
+        </LinearLayout>
     </LinearLayout>
 </androidx.cardview.widget.CardView>

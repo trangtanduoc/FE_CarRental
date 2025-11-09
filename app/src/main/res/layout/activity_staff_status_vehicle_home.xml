@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
+    android:layout_height="match_parent"
+    tools:context=".ui.staff.StaffStatusVehicleHomeActivity">
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:background="@android:color/black"
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-        app:title="@string/staff_home_title"
+        app:title="Danh sách trạng thái"
         app:titleTextColor="@android:color/white"
-        app:menu="@menu/menu_topbar"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
@@ -28,11 +29,11 @@
         app:layout_constraintEnd_toEndOf="parent">
 
         <Button
-            android:id="@+id/btnManageUsers"
+            android:id="@+id/btnBooked"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/box_button"
-            android:text="Quản lý người dùng"
+            android:text="Xe đang được đăng kí thuê"
             android:textColor="@android:color/white"
             app:backgroundTint="@null"
             android:layout_marginBottom="20dp"
@@ -41,11 +42,12 @@
             android:layout_marginTop="100dp"/>
 
         <Button
-            android:id="@+id/btnManageStationAndVehicle"
+            android:id="@+id/btnInUse"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/box_button"
-            android:text="Quản lý trạm và xe"
+            android:text="Xe đang được thuê"
+            android:textColor="@android:color/white"
             app:backgroundTint="@null"
             android:layout_marginStart="10dp"
             android:layout_marginEnd="10dp"
@@ -53,16 +55,27 @@
             android:layout_marginBottom="20dp"/>
 
         <Button
-            android:id="@+id/btnManageStatusVehicle"
+            android:id="@+id/btnAvailable"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/box_button"
-            android:text="Quản lý trạng thái xe"
+            android:text="Xe có thể thuê"
+            app:backgroundTint="@null"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"/>
+
+        <Button
+            android:id="@+id/btnMaintenance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/box_button"
+            android:text="Xe đang bảo trì"
             app:backgroundTint="@null"
             android:layout_marginStart="10dp"
             android:layout_marginEnd="10dp"
             android:layout_marginTop="20dp"
             android:layout_marginBottom="20dp"/>
     </LinearLayout>
-
 </androidx.constraintlayout.widget.ConstraintLayout>

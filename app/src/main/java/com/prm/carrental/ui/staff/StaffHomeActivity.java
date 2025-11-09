@@ -14,6 +14,8 @@ import com.prm.carrental.core.ui.BaseActivity;
  */
 public class StaffHomeActivity extends BaseActivity {
 
+    private Button btnManageUsers, btnManageStationAndVehicle, btnManageStatusVehicle;
+
     @Override
     protected int layoutId() {
         return R.layout.activity_staff_home;
@@ -22,14 +24,20 @@ public class StaffHomeActivity extends BaseActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Button pendingUsers = findViewById(R.id.buttonPendingUsers);
-        Button manageVehicles = findViewById(R.id.buttonManageVehicles);
+        btnManageUsers = findViewById(R.id.btnManageUsers);
+        btnManageStationAndVehicle = findViewById(R.id.btnManageStationAndVehicle);
+        btnManageStatusVehicle = findViewById(R.id.btnManageStatusVehicle);
 
-        pendingUsers.setOnClickListener(v ->
-            startActivity(new Intent(this, PendingVerificationListActivity.class))
+        btnManageUsers.setOnClickListener(v ->
+            startActivity(new Intent(this, StaffUserListActivity.class))
         );
-        manageVehicles.setOnClickListener(v ->
-            startActivity(new Intent(this, StationVehiclesActivity.class))
+
+        btnManageStationAndVehicle.setOnClickListener(v ->
+            startActivity(new Intent(this, StaffStationListActivity.class))
+        );
+
+        btnManageStatusVehicle.setOnClickListener(v ->
+            startActivity(new Intent(this, StaffStatusVehicleHomeActivity.class))
         );
     }
 }

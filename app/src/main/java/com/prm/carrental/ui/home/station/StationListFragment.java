@@ -41,7 +41,7 @@ public class StationListFragment extends BaseFragment {
         super.onViewCreated(view, savedInstanceState);
         progressBar = view.findViewById(R.id.progressStations);
         emptyView = view.findViewById(R.id.stationEmptyView);
-        recyclerView = view.findViewById(R.id.stationRecyclerView);
+        recyclerView = view.findViewById(R.id.rvStationList);
         recyclerView.setLayoutManager(new LinearLayoutManager(requireContext()));
         adapter = new StationAdapter(this::openStationDetail);
         recyclerView.setAdapter(adapter);

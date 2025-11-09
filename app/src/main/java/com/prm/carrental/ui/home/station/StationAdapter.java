@@ -60,9 +60,9 @@ class StationAdapter extends RecyclerView.Adapter<StationAdapter.ViewHolder> {
 
         ViewHolder(@NonNull View itemView) {
             super(itemView);
-            name = itemView.findViewById(R.id.stationName);
-            address = itemView.findViewById(R.id.stationAddress);
-            availability = itemView.findViewById(R.id.stationAvailability);
+            name = itemView.findViewById(R.id.tvStationName);
+            address = itemView.findViewById(R.id.tvStationAddress);
+            availability = itemView.findViewById(R.id.tvStationAvailability);
         }
 
         void bind(StationDto station, Callback callback) {

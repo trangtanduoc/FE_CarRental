@@ -28,6 +28,13 @@ public class VehicleDto {
     @SerializedName("createdAt")
     private String createdAt;
 
+    @SerializedName("ImageUrl")
+    private String imageUrl;
+
+    public String getImageUrl() {
+        return imageUrl;
+    }
+
     public String getId() {
         return id;
     }

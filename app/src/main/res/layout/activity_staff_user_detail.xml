@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@android:color/black"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:title="Quản lý người dùng"
+        app:titleTextColor="@android:color/white"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/containerBtn"
+        android:gravity="center_horizontal">
+        <ImageView
+            android:id="@+id/imgAvatar"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/ic_user"
+            android:scaleType="centerCrop"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="20dp"/>
+<!--        FullName-->
+        <TextView
+            android:id="@+id/tvTitleFullName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="10dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:text="Họ và Tên:"
+
+            android:drawableStart="@drawable/ic_person"
+            android:drawablePadding="8dp"
+            />
+
+        <TextView
+            android:id="@+id/tvFullName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:padding="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/box_input"
+            android:text="Nguyễn Văn A"/>
+
+<!--        Email-->
+        <TextView
+            android:id="@+id/tvTitleEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="10dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:text="Email:"
+
+            android:drawableStart="@drawable/ic_email"
+            android:drawablePadding="8dp"
+            />
+
+        <TextView
+            android:id="@+id/tvEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:padding="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/box_input"
+            android:text="Email@gmail.com"/>
+
+<!--        Id Card-->
+        <TextView
+            android:id="@+id/tvTitleIdCardNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="10dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:text="Số CCCD:"
+
+            android:drawableStart="@drawable/ic_id_card"
+            android:drawablePadding="8dp"
+            />
+
+        <TextView
+            android:id="@+id/tvIdCardNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:padding="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/box_input"
+            android:text="031452...."/>
+
+<!--        DriverlicenseNumber-->
+        <TextView
+            android:id="@+id/tvTitleDriverLicenseNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="10dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:text="Số giấy phép lái xe:"
+
+            android:drawableStart="@drawable/ic_id_card"
+            android:drawablePadding="8dp"
+            />
+
+        <TextView
+            android:id="@+id/tvDriverLicenseNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:padding="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/box_input"
+            android:text="02351154845"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/containerBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <Button
+            android:id="@+id/btnDelete"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/box_button_cancel"
+            android:text="Xóa"
+            android:textColor="@android:color/white"
+            app:backgroundTint="@null"
+            android:layout_margin="10dp"/>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

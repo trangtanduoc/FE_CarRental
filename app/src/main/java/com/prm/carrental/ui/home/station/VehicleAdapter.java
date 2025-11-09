@@ -61,9 +61,9 @@ class VehicleAdapter extends RecyclerView.Adapter<VehicleAdapter.ViewHolder> {
 
         ViewHolder(@NonNull View itemView) {
             super(itemView);
-            plate = itemView.findViewById(R.id.vehiclePlate);
-            status = itemView.findViewById(R.id.vehicleStatus);
-            battery = itemView.findViewById(R.id.vehicleBattery);
+            plate = itemView.findViewById(R.id.tvVehiclePlate);
+            status = itemView.findViewById(R.id.tvVehicleStatus);
+            battery = itemView.findViewById(R.id.tvVehicleBattery);
         }
 
         void bind(VehicleDto vehicle, Callback callback) {
